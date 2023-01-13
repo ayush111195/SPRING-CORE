@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+   
+                 <!-- 1.  statndalone list -->
+   
+   <util:list list-class="java.util.LinkedList" id="mybestfriends" > 
+   <value>aman</value>
+   <value>arpit</value>
+   <value>akash</value>
+   <value>shivam</value>
+   </util:list>
+   
+                      <!-- 2.  statndalone map -->
+                      
+    <util:map map-class="java.util.HashMap" id="fees">
+    <entry key="spring framwork" value="8000" />
+    <entry key="spring boot framwork" value="10000" />
+    <entry key="java core" value="18000" />
+    <entry key="java advance" value="19000" />
+    </util:map>                  
+                        <!-- 3.  statndalone properties -->
+                        
+    <util:properties  id="databaseconfig">  
+    <prop key="driver"> com.mysql</prop>  
+     <prop key="username">ayush </prop>
+     <prop key="password">ayush123@</prop>
+      <prop key="urll">mysql:jdbc://localhost9450</prop>
+    </util:properties> 
+                        
+   <bean class="com.springcore.standalone.collections.Person" name="person1" >
+   <property name="friends" ref="mybestfriends" />
+   <property name="feestructure" ref="fees" />
+    <property name="properties" ref="databaseconfig" />
+   
+          <!-- 2nd method -->
+   <!--     <property name="friends" />
+   <ref bean="mybestfriends" /> -->
+   </bean>
+  </beans>

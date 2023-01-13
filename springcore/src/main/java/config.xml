@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="https://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+               
+   
+   <!-- (3.) add value by using p schema-->
+   
+   <!--  this is our 1 bean-->
+   <bean class="com.springcore.Student" name="student1"  p:StudentId="123" p:StudentName="ayush gupta" p:StudentAddress="1480 indra nagar orai "/>
+    <!--  this is our 2 bean-->
+    <bean class="com.springcore.Student" name="student2"  p:StudentId="123" p:StudentName="ayush gupta" p:StudentAddress="1480 indra nagar orai "/>
+    
+  <!-- (2.)  use value as attribute-->
+  
+   <!-- <bean class="com.springcore.Student" name="student1">
+   <property name="StudentId" value="123"/>
+   <property name="StudentName" value="ayush"/>
+   <property name="StudentAddress" value="1480 indra nagar orai"/>
+   
+   </bean>-->
+   
+ <!--(1.)
+ <bean class="com.springcore.Student" name="student1">
+   <property name="StudentId">
+   <value>123</value>
+   </property>
+    <property name="StudentName">
+   <value>ayush gupta</value>
+   </property>
+    <property name="StudentAddress">
+   <value>1480 indra nagar orai</value>
+   </property>
+   </bean>-->
+ 
+ </beans>

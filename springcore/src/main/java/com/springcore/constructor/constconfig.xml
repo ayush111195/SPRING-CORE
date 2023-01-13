@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+   
+ <bean class="com.springcore.constructor.Certi" name="cer">
+ <constructor-arg value="java spring is a great "/>
+ </bean>
+ 
+ <bean class="com.springcore.constructor.Person" name="person">
+ <constructor-arg value="ayush gupta" />
+ <constructor-arg value="12223" />
+ <constructor-arg ref="cer" />
+  <constructor-arg>
+  <list>
+  <value>6392709832</value>
+   <value>9450709832</value>
+    <value>885309832</value>
+  </list>
+  </constructor-arg>
+  </bean>
+  
+  <bean class="com.springcore.constructor.Adition" name="add">
+  <constructor-arg value="12" type="int" index="1" />   <!--    constructor hmesha uper wale constructor ko pehle leta h jaise abhi int ki value wala pehla h to answer main int,int ata h-->  
+  <constructor-arg value="34" type="int" index="0" />   <!--  agr double ko uper likh lete h to answer main double ayega lekin agr constructor string type ko defult ki pehle leta h chahe-->
+   </bean>                                              <!-- chahe wo sabse neche hi kyun na ho pr hum log type main de kr change kar skte h -->
+                                                        <!-- value=12 h jo ki a ki value h kyun ki pehle a likha h constructor main -->
+                                                        <!-- value=34 h jo ki b ki value h kyun ki baad main likha h b pr isko hum change kar skte h  -->
+ </beans>
